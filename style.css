@@ -1,0 +1,879 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM sans';
+    color: white;
+   
+}
+
+#header h1{
+    position: fixed;
+    top: 0.7em;
+    left: 6em;
+}
+
+#spotify {
+    position: fixed;
+    top: 1em;
+    left: 7em;
+    width: 8em
+}
+
+#spotify2{
+   display: none;
+}
+
+#header{
+    top: 0;
+    left: 0;
+    position: sticky;
+    width: 100%;
+    height: 5em;
+    z-index: 32;
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+    background-color: black;
+}
+
+#navbar {
+    margin-left: 29em;
+    display: flex;
+    color: white;
+}
+
+.nav-link {
+  margin: 1.5em;
+  font-weight: bold;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+    color:  lightgreen;
+}
+
+.list {
+    width: 1px;
+    background-color: white;
+    height: 1em;
+    margin-top: 1.7em;
+}
+
+.hamburger {
+   position: fixed;
+   top: 0;
+   right: 0;
+   display: none;
+}
+
+.bar {
+   background-color: white;
+   width: 32px;
+   height: 3px;
+   margin: 5px 17px;
+   display: block;
+   transition: all 0.3s ease;
+}
+
+.hamburger.active .bar:nth-child(2){
+   opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1){
+   transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3){
+   transform: translateY(-8px) rotate(-45deg);
+}
+
+#hero {
+    padding: 1em 4em;
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.hero-container {
+    display: flex;
+}
+
+.hero-words {
+    flex-basis: 65%;
+}
+
+.hero-words h1 {
+   font-size: 2.5em;
+    padding: 1em 1em 1em 0px;
+}
+
+.free {
+    padding: 0em  2em 2em 0px; 
+    font-size: 1.4em;
+    line-height: 1.9;
+}
+
+.sub-buttons {
+    display: flex;
+}
+
+.b-button {
+    background-color: black;
+    padding: 15px 3em;
+    border-radius: 22px;
+    color: white;
+    border: none;
+    margin: 0em 4px;
+}
+
+.T-button {
+    margin: 0em 4px;
+    background-color: transparent;
+    padding: 10px 2em;
+    border: 1px solid white;
+    border-radius: 22px;
+    color: white;
+}
+
+.ind {
+    font-size: 10.7px;
+    line-height: 1.5;
+    margin-top: 4em;
+    padding-bottom: 4em;
+    padding-right: 9em;
+}
+
+.ind a {
+    color: white;
+    text-decoration: underline;
+}
+
+.hero-img {
+    flex-basis: 35%;
+    width: 100%;
+    height: auto;  
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+ 
+
+#premium h1 {
+    color: black;
+    padding: 2em;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.premium-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    color: #000;
+    padding-bottom: 3em;
+}
+
+.phone {
+     height: 6.5em;
+     object-fit: contain;
+}
+
+.col{
+    margin: 1em 3em;   
+}
+
+ .col h3 {
+    padding-top: 1em; 
+ }
+
+ .col p {
+    font-size: 12px;
+ }
+
+ .col img {
+    width: 6em;
+    padding: 1em;
+    border-radius: 50%;
+    background-color: rgb(206, 199, 199);
+ }
+
+ #pick {
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    padding-bottom: 5em;
+    background-color: rgb(224, 216, 216);
+ }
+
+  #pick h1 {
+    font-size: 2em;
+    text-align: center;
+    padding-top: 2em;
+    font-weight: bold;
+  }
+
+  #pick p {
+    text-align: center;
+    padding-bottom: 4em;
+  }
+
+ td {
+    overflow: hidden;
+    padding: 1.5em;
+    font-weight: bold;
+    border-bottom: 0.5px solid rgb(172, 168, 168);
+ }
+
+ .what {
+    text-align: left;
+ }
+
+ .purple {
+    color: white;
+    background-color: rgb(146, 4, 146);
+ }
+
+  th{
+   padding: 2em;
+   text-align: left;
+ }
+  
+  table {
+    width: 60%;
+    border-collapse: collapse;
+    background-color: white;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .pick2 {
+      align-items: center;
+      justify-content: center;
+ }
+
+ .row {
+      padding: 3em;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+      grid-gap: 2px;
+      width: 100%;
+      margin: 0 auto;    
+ }
+
+ .col2 {
+   box-shadow: 0.5px 0.5px 12px rgb(133, 129, 129);
+   align-items: center;
+   justify-content: center;
+   margin: 2em auto;
+   width: 18em;
+   border-radius: 1em;
+   background-color: white;;
+   padding: 16px;
+   flex: 1;
+ }
+
+  #months {
+    white-space: nowrap;
+    color: white;
+    border-radius: 3px;
+    padding: 6px 1em;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(77, 77, 240);
+ }
+
+ .col2 h2 {
+    padding-top: 12px; 
+ }
+
+ .col2 h4 {
+    font-weight: 100;  
+ }
+
+ .col2 h6 {
+    font-weight: 100;
+    opacity: 0.8;
+ }
+
+ .col2 a {
+    text-decoration: underline;
+    color: #000;
+ }
+ .prepaid {
+    color: rgb(77, 77, 240);
+    border: rgb(77, 77, 240) solid 1px;
+    background-color: transparent;
+    padding: 5px 10px;
+    font-weight: bold;
+    margin-top: 14px;
+    border-radius: 3px;
+ }
+
+ .line {
+    background-color: rgb(150, 142, 142);
+    width: 100%;
+    height: 2px;
+    margin-top: 1em;
+    margin-bottom: 13px;
+ }
+ 
+ #line2 {
+   margin-top: 3.4em;
+ }
+
+ .col2 li {
+    margin-top: 1em;
+ }
+
+ .get {
+    background-color: black;
+    color: white;
+    white-space: nowrap;
+    padding: 12px 6em;
+    border-radius: 20px;
+    text-align: center;
+    margin: 2em auto;
+    width: 100%;
+ }
+
+ .first-list {
+   margin-bottom: 4.5em;
+ } 
+ 
+
+ #footer {
+    align-content: center;
+    justify-content: center;
+    background-color: black;
+    padding: 2em;
+ }
+
+ .footer-con {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ .com{
+    margin: 3em 1em 0em 3em;
+ }
+
+ .com h5 {
+    opacity: 0.6;
+ }
+
+ .com li {
+    margin-top: 1em;
+ }
+
+ .media {
+    display: flex;
+    margin-left: 8em;
+ }
+
+ .social {
+     background-color: rgb(46, 45, 45); 
+     height: 6vh;
+     width: 2.5em;
+     position: relative;
+     margin: 4em 0.5em;
+     border-radius: 50%;
+     object-fit: cover;
+ }
+
+ #socials {
+   padding-left: 0.5em;
+ }
+
+ .footer-con h1 {
+    margin-top: 2em;
+ }
+ 
+
+ #sporty {
+   object-fit: contain;
+   width: 8em;
+   margin-left: -2em;
+   height: 9vh;
+   margin-top: 0em;
+   margin-right: 2px;
+ }
+
+ .foot-li{
+    display: flex;
+ }
+   
+ .copy {
+    align-content: flex-end;
+    justify-content: end;
+ }
+
+ .copy li {
+    text-align: end;
+     margin: 1em;
+     
+ }
+
+ .copyright {
+    display: flex;
+    opacity: 0.7;
+    margin-top: 6em;
+    
+ }
+
+ .privacy {
+    display: flex;
+    flex-basis: 80%;
+ }
+
+ .foot-li {
+     margin: 1em;
+ }
+
+ .left {
+   display: inline-block;
+    
+ }
+
+ @media screen and (max-width:969px)
+    {
+
+   #navbar {
+      padding-top: 2em;
+       position: fixed;
+       right: -100%;
+       top: 40px;
+       gap: 0;
+       width: 50%;
+       height: 100%;
+       transition: 0.3s;
+       flex-direction: column;
+       background-color: #000;   
+   }
+
+   #navbar.active {
+      right: 0;
+   }
+   .hamburger {
+      top: 12px;
+      display: block;
+      z-index: 32;
+   }
+
+   #spotify2{
+     display: block;
+     width: 9em;
+     position:absolute;
+     left:0;
+     bottom:4em;
+     padding: 1em;
+   } 
+
+   #spotify {
+      left: 1em;
+   }
+
+   .list {
+      height: 2px;
+      width: 2em;
+      margin-left: 3em;
+      margin-top: 1px;
+      margin-bottom: 3em;
+   }
+ 
+
+   .nav-link:hover {
+      color: white;
+   }
+ 
+   #prem {
+      margin-top: -1em;
+      font-size: 2em;
+      font-weight: bold;
+   }
+
+   #prem2 {
+      padding-left: .5em;
+      margin-top: -.5em;
+      font-size: 1.5em;
+   }
+ 
+
+   #hero {
+      padding: 2em 2em;   
+   }
+
+   .hero-container {
+      display: block;
+   }
+
+   .hero-words {
+      flex-basis: 100%;
+   } 
+
+   .hero-img {
+      flex-basis: 100%;
+      width: 25em;
+      height: 40vh; 
+      margin: 2em auto;
+      align-content: center;
+      justify-content: center;
+   }
+
+   .hero-img img {
+      align-content: center;
+      justify-content: center;
+      padding-bottom: 1em;
+   }
+
+   .free{
+      font-size: 1.5em;
+      padding: 0em  0em 2em 0px;
+   }
+
+   .ind {
+     font-size: 12px;
+     margin-top: 4em;
+   }
+     
+   .hero-words h1 {
+      padding: 1.5em 2em 1.5em 0px;
+      font-size: 2.5em;
+   }
+
+   
+   table {
+      width: 60%;
+   }
+ 
+
+   #premium h1{
+      font-size: 2.5em;
+   }
+
+   .col{
+      display: flex;
+      margin-right: 3em;
+   }
+
+   .col-caption {
+      margin-left: 1em;
+   }
+
+   #column {
+      margin-right: 5em;
+   }
+
+   .row {
+      width: 100%;
+      display: block;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .col2 {
+      width: 60%;
+      margin: 2em auto;
+   }
+
+   .first-list {
+     margin-bottom: 0.5em;
+   } 
+
+   #footer {
+      padding: 7px;
+      position: relative;
+   }
+
+   #company {
+      margin-left: -7em; 
+   }
+
+    #sporty{
+      width: 7em;
+      margin-left: -3em;
+   }
+
+   .com {
+       margin: 8em 4em 9em 4em;
+      
+   }
+
+   .media {
+      margin-left: 2em;
+      position: absolute;
+      left: 0;
+      bottom: 3em;  
+   }
+
+   .social {
+      margin: 2em 0.3em;
+      padding-left: 0.6em;
+      width: 3em;
+      height: 5vh;
+   }
+
+   
+ #socials {
+   padding-left: 0em;
+ }
+        
+  .foot-li {
+      font-size: 12px;
+      display: flex;
+      margin: 10px;
+   }
+
+   .copy {
+      white-space: nowrap;
+      margin-top: -3em;
+   }
+
+   .copy li {
+      margin: 3px;
+   }
+
+ }
+
+ @media screen and (max-width:600px){
+
+   #header {
+      height: 4em;
+   }
+   #navbar {
+      width: 100%;
+      top: 0px;
+      z-index: 99999;
+      padding-top: 5em;
+   }
+   #spotify {
+     left: 1em;
+     width: 7em;
+   }
+
+   .hamburger {
+      z-index: 99999;
+   }
+
+   .bar {
+      height: 3px;
+      width: 30px;
+   }
+
+   #hero {
+      display: block;
+   }
+
+   .hero-container {
+      display: block;
+   }
+
+   .hero-img {
+      width: 100%;
+      height: 48vh;
+      flex-basis: 100%;
+      align-content: center;
+      justify-content: center;
+      margin: 0 auto;
+      padding-bottom: 3em;
+      text-align: center;
+   }
+
+   .hero-img img {
+      margin: 2em 1px;
+      align-content: center;
+      justify-content: center;
+   }
+
+   .sub-buttons {
+      display: block;
+   }
+
+   .b-button {
+      width: 100%;
+   }
+
+   .T-button {
+      width: 100%;
+      margin-top: 1em;
+   }
+
+   .free {
+      line-height: 1.5;
+      font-size: 18px;
+      padding: 0 0 1em 0px;
+   }
+
+   .ind {
+      padding-right: 0em;
+   }
+
+   #hero {
+      padding: 1em;
+   }
+
+   .hero-words h1 {
+      font-size: 1.7em;
+      padding: 2em 0em 1em 0px;
+   }
+
+   .premium-container {
+      display: block;
+   }
+
+   .pick-container {
+      padding: 5px;
+   }
+
+   th{
+      white-space: nowrap;
+   }
+
+   td {
+      font-size: 13px;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word;
+   }   
+ 
+   #company {
+      margin-left: 1em;
+   }
+
+   .com {
+      margin: 3em 1em;
+   }
+
+   #sporty {
+      width: 9em;
+      padding: 1em;
+      margin-left: -1em;
+   }
+
+   #prem {
+      font-size: 1.5em;
+   }
+
+   #premium {
+      align-content: center;
+      justify-content: center;
+   }
+ 
+   #premium h1 {
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+   }
+
+   .col2 {
+      display: block;
+      width: 100%;
+      margin: 1em auto;
+   }
+
+   .row {
+      display: block;
+      padding: 1em;
+   }
+   .col {
+      margin: 4em 2em;
+   } 
+
+   table {
+      width: 20%;
+   }
+
+   .table-con {
+      margin: 6px;
+   }
+
+   th {
+      padding: 2em 3em 2em 1em;
+   }
+ 
+   #pick p {
+      padding: 0em 1em 3em 1em;
+   }
+
+   .media {
+      display: flex;
+      bottom: 5em;
+      margin-left: 7px;
+      
+   }
+
+   #useful {
+      padding-bottom: 5em;
+   }
+
+   .footer-con {
+      display:block;
+   }
+   
+   .social {
+      height: 7vh;
+      padding-left: 0em;
+   }
+   .privacy {
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: 45%;
+   }
+
+   .foot-li {
+      display: flex;
+      font-size: 9px;
+   }
+
+   .copy {
+      position: absolute;
+      right: 1em;
+   }
+
+   .copy li {
+      font-size: 10px;
+   }
+
+ }
+/*
+ @media screen and  (max-width:1024px),
+ (min-width:1023px) {
+     #spotify {
+      left: 2em;
+     }
+
+     #navbar {
+      margin-left: 30em;
+     }
+
+     .row {
+      display: block;
+       
+     }
+
+     .col2 {
+      margin: 2em auto;
+      width: 40%;
+     }
+ }
